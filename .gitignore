@@ -1,0 +1,3 @@
+/node_modules
+/src/discord/credentials.js
+/src/core_plugins/lifetime/data

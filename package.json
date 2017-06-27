@@ -1,0 +1,27 @@
+{
+  "name": "gdiscordbot",
+  "version": "1.0.0",
+  "description": "gdiscordbot",
+  "scripts": {
+    "start": "node ./src/main.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "Discord",
+    "Bot"
+  ],
+  "author": "@GeordiePowers",
+  "license": "CC0-1.0",
+  "homepage": "",
+  "dependencies": {
+    "discordie": "^0.10.0"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
+  }
+}
