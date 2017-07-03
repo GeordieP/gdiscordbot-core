@@ -45,8 +45,8 @@ module.exports = function(logger = default_logger) {
     *
     * => Promise
     */
-    this.clientDisconnect = (client_callback) => {
-        return client_callback()
+    this.clientDisconnect = () => {
+        return this.clientDisconnectCallback()
     }
 
     /*
@@ -231,8 +231,7 @@ const PluginAPI = function(pluginManager) {
     }
 
     pub.disconnect = (event_type, func) => {
-        pluginManager.clientDisconnect(event_type, func)
-            .catch(e => logger.error("Error disconnecting: " + e))
+        pluginManager.clientDisconnect()
     }
     
     /*---
