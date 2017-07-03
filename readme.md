@@ -15,6 +15,12 @@ A [Discord](https://discordapp.com/) chat bot platform designed around the idea 
 2) Open the "credentials.js" file in a text editor and update the "DISCORD_CLIENT_TOKEN" string with your token. Read the comments given in the template file for more details.
 3) Create or install a plugin. See **Plugin Creation** for more information.
 
+## Configuration
+
+At startup, the application will read two files: `src/config_default.js`, and `src/config.js`. By default, the key/value pairs in config_default.js will be used. However, any overlapping keys present in the config.js file will override the existing keys in config_default.js, and their values will be loaded instead.
+
+The recommended workflow for configuration is to place the updated key/value pairs you would like to change into `src/config.js`. Only valid keys will be recognized. Use the `src/config_default.js` file as reference; no modifications to the config_default.js file should be necessary.
+
 
 ## Run
 1) Run `npm start` in project root directory
