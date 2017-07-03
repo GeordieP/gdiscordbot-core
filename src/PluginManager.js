@@ -8,7 +8,7 @@ let ACTIVE_PLUGINS = {}
 let ACTIVE_CMDS = {}
 
 // plugin registration regex
-const REGEX_DISABLED_PLUGIN = /disabled/
+const REGEX_DISABLED_PLUGIN = /disabled|\.git/
 const REGEX_CHARACTERS_REPLACE_WITH_UNDERSCORE = /\s/
 const REGEX_IS_JS_FILE = /\.js/
 
@@ -291,7 +291,7 @@ const loadPluginsFromPath = (plugins_dir, plugin_api, logger = default_logger) =
                 return
             }
 
-            // ignore plugin if the file has 'disabled' in the name
+            // ignore plugin if the file has 'disabled' in the name (or is .git folder)
             if (REGEX_DISABLED_PLUGIN.test(file_name.toLowerCase())) {
                 logger.info("Plugin Registry: " + file_name + " is disabled, skipping")
                 return
