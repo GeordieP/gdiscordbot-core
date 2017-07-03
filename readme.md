@@ -21,6 +21,7 @@ At startup, the application will read two files: `src/config_default.js`, and `s
 
 The recommended workflow for configuration is to place the updated key/value pairs you would like to change into `src/config.js`. Only valid keys will be recognized. Use the `src/config_default.js` file as reference; no modifications to the config_default.js file should be necessary.
 
+A custom path to a config.js file can be provided at start time using the command line argument `cfg`. Example: `node src/main.js --cfg "../my_directory/my_config.js"
 
 ## Run
 1) Run `npm start` in project root directory
